@@ -2,6 +2,7 @@ export interface Base {
     hash: string;
     splitFileCount?: number;
     completeFileSize?: number;
+    completeFileSizeUncompressed: number
     files: string[];
 }
 
