@@ -1,3 +1,5 @@
+import {ModuleDecompressorEvents} from "./install/module-decompressor";
+
 export interface Base {
     hash: string;
     splitFileCount?: number;
@@ -171,7 +173,7 @@ export interface FragmenterInstallerEvents {
     "downloadInterrupted": (module: Module, fromUserAction: boolean) => void;
     "downloadFinished": (module: Module) => void;
     "unzipStarted": (module: Module) => void;
-    "unzipProgress": (module: Module) => void; //aggiungere modulo dopo.
+    "unzipProgress": (module: Module, progress: ModuleDecompressorEvents) => void;
     "unzipFinished": (module: Module) => void;
     "copyStarted": (module: Module) => void;
     "copyProgress": (module: Module, progress: CopyProgress) => void;
